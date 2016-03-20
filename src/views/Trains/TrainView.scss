@@ -1,0 +1,168 @@
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.callingpoints-container {
+  /*width: 500px;*/
+  margin: 0 auto;
+}
+.callingpoints-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.titleHeading{
+  padding-left: 0.7em;
+  padding-right: 2em;
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+#callingpoints-timeline {
+  position: relative;
+  padding: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#callingpoints-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  left: 158px;
+  width: 4px;
+  background: #d7e4ed;
+}
+.callingpoints-timeline-over {
+  width: 4px;
+  background: #C2D65F;
+  left: 158px;
+  top: 0;
+  position: absolute;
+  display: inline;
+  z-index: 1;
+}
+
+.callingpoints-timeline-back {
+  width: 12px;
+  background: #0D345D;
+  left: 154px;
+  top: 30px;
+  position: absolute;
+  display: inline;
+}
+.header {
+  background: #EEEEEE;
+  color: #24476C;
+  padding: 0.6em;
+  padding-left: 1em;
+  font-size: 22px;
+  font-size: 1.7rem;
+  position: relative;
+  width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.callingpoints-timeline-block {
+  position: relative;
+  width: 525px;
+  height: 115px;
+}
+.callingpoints-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.callingpoints-timeline-block:first-child {
+  margin-top: 0;
+}
+.callingpoints-timeline-block:last-child {
+  margin-bottom: 0;
+}
+.callingpoints-timeline-imgtrain {
+  position: absolute;
+  left: 135px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D345D;
+  margin-top: 20px;
+  top: 25px;
+  z-index: 1;
+}
+.callingpoints-timeline-imgtrain img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+.callingpoints-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 145px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.callingpoints-timeline-img.passed {
+  background: #C2D65F;
+  box-shadow: 0 0 0 4px #0D345D;
+}
+.callingpoints-timeline-img.default {
+  background: #ffffff;
+  box-shadow: 0 0 0 4px #B4CFDD, inset 0 0 0 1px #B4CFDD;
+}
+.callingpoints-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div.passed, div.passed h1 {
+  color: #999999 !important;
+}
+div.default, div.default h1 {
+  color: #0D345D !important;
+}
+.minutesLate {
+  color: #C91D30 !important;
+}
+.thick {
+  font-weight: bold;
+}
+.callingpoints-timeline-content {
+  position: relative;
+  width: 310px;
+  float: right;
+}
+.callingpoints-timeline-content div, .callingpoints-timeline-schedule div {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-top: 0.6em;
+}
+.callingpoints-timeline-content .callingpoints-latedetail {
+  float: left;
+}
+.callingpoints-timeline-content .callingpoints-platform {
+  float: right;
+}
+.callingpoints-timeline-schedule {
+  position: relative;
+  margin-left: 1.4em;
+  width: 80px;
+  text-align: right;
+  float: left;
+}
