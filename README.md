@@ -12,13 +12,15 @@ are relevant to this exercise
 1. npm install
 2. npm test
 3. npm start
-Then visit `localhost:3000` in your browser.
+4. Then visit `localhost:3000` in your browser.
 http://localhost:3000
 
 ---
 ## Testing
 
 1. npm test
+
+This assignment has been tested in three mordern browsers viz. [Chrome](http://i.imgur.com/FqOVTGP.png), [Firefox](http://i.imgur.com/ReKyCLU.png) and [Microsoft Edge](http://i.imgur.com/zZQYFMl.png). Results can be found on clicking in the links
 
 #UI Developer Technical Exercise
 
