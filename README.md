@@ -4,9 +4,6 @@ This project is generated with [React Redux Starter Kit](https://github.com/dave
 Please note that files, environment settings are unchanged from the starter kit. The only files changed or added
 are relevant to this exercise
 
-## ThoughtProcess while doing this assignment
---TODO
-
 ## Build & development
 
 1. npm install
@@ -16,11 +13,27 @@ are relevant to this exercise
 http://localhost:3000
 
 ---
+
 ## Testing
 
 1. npm test
 
 This assignment has been tested in three mordern browsers viz. [Chrome](http://i.imgur.com/FqOVTGP.png), [Firefox](http://i.imgur.com/ReKyCLU.png) and [Microsoft Edge](http://i.imgur.com/zZQYFMl.png). Results can be found on clicking in the links
+
+## ThoughtProcess while doing this assignment
+1. This is an interesting problem, I first thought of creating a template of calling points. This is possible when there are no 'actual' property present in the data.
+![first.png](http://i.imgur.com/wou9e0V.png)
+
+2. Then I started putting in the 'actual' property in the data to see the station covered.
+![second.png](http://i.imgur.com/OD1JOc6.png)
+
+3. And at last, I'm assuming that when the journey is finished, the station icon is never reached the destination point.
+![third.png](http://i.imgur.com/ffrMt1o.png)
+
+4. And at last, what happens when 'actual' property exists in subsequent stations, this -
+![fourth.png](http://i.imgur.com/6h9aG32.png)
+
+---
 
 #UI Developer Technical Exercise
 
