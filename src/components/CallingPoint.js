@@ -13,14 +13,19 @@ class Header extends React.Component {
     return (
       <li className={this.props.listClassName}>
         <div className='calling-point-time'>{this.props.callingPoint.expected}</div>
+        <div className='calling-point-time-actual'>15:35</div>
+
         <div className={this.props.stationContainerClassName}>
-          <div className={this.props.overlineDecorator}></div>
+          <div className={this.props.stationContainerDecoratorClassName}>
+          <div className={this.props.overlineDecoratorClassName}></div>
           <i className='icon icon-train-circle' />
           <div className={this.props.stationClassName}>
+            {this.props.callingPoint.station}
           </div>
-          <div className='calling-point-due'>
-            <span></span>
-            <span></span>
+          <div className={this.props.callingPointDueClassName}>
+            <span className={this.props.dueInfoClassName}>9 min late</span>
+            <span style={{float: 'right'}}>Platform 7</span>
+          </div>
           </div>
         </div>
       </li>

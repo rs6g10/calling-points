@@ -1,98 +1,10 @@
 //colors
-$black: #000;
 $color_mountain_mist_approx: #999;
-$white: #fff;
-$color_alto_approx: #ddd;
-$color_st_tropaz_approx: #2a539d;
-$color_bon_jour_approx: #dfdfdf;
-$color_mercury_approx: #e3e3e3;
-$color_celeste_approx: #ccc;
-$color_cod_gray_approx: #080808;
-$color_tundora_approx: #444;
-$yellow: #ff0;
-$color_emperor_approx: #4d4d4d;
-$color_fun_blue_approx: #2364aa;
-$color_biscay_approx: #163f6b;
-$color_cararra_approx: #ebebeb;
-$color_solitaire_approx: #fcf8e3;
-$color_puerto_rico_approx: #48d5b5;
-$color_shamrock_approx: #2cbe9d;
-$color_killarney_approx: #3c763d;
-$color_lunar_green_approx: #2b542c;
-$color_calypso_approx: #31708f;
-$color_san_juan_approx: #245269;
-$color_pesto_approx: #8a6d3b;
-$color_shingle_fawn_approx: #66512c;
-$color_apple_blossom_approx: #a94442;
-$color_lotus_approx: #843534;
-$color_willow_brook_approx: #dff0d8;
-$color_pixie_green_approx: #c1e2b3;
-$color_link_water_approx: #d9edf7;
-$color_regent_st_blue_approx: #afd9ee;
-$color_astra_approx: #f7ecb5;
-$color_vanilla_ice_approx: #f2dede;
-$color_rose_fog_approx: #e4b9b9;
-$mercury: #e5e5e5;
-$color_dove_gray_approx: #6e6e6e;
-$black_7_5: rgba(0,0,0,.075);
-$color_cornflower_blue_approx: #66afe9;
-$color_cornflower_blue_60_approx: rgba(102,175,233,.6);
-$color_fern_approx: #67b168;
-$color_twine_approx: #c0a16b;
-$color_new_york_pink_approx: #ce8483;
-$color_stack_approx: #8c8c8c;
-$white_10: rgba(255,255,255,.1);
-$wild_sand: #f4f4f4;
-$color_astronaut_approx: #1f3e75;
-$color_tapa_approx: #777;
-$color_suva_gray_approx: #888;
-$color_log_cabin_approx: #222;
-$color_mine_shaft_approx: #333;
-$color_woodsmoke_approx: #101010;
-$black_12_5: rgba(0,0,0,.125);
-$color_silver_chalice_approx: #adadad;
-$color_quill_gray_approx: #d4d4d4;
-$color_genoa_approx: #196b59;
-$color_jungle_green_approx: #25a185;
-$color_cloud_burst_approx: #21314d;
-$color_big_stone_approx: #19263b;
-$color_mirage_approx: #121a29;
-$color_vulcan_approx: #0f1622;
-$black_15: rgba(0,0,0,.15);
-$black_13: rgba(0,0,0,.13);
-$alabaster: #fafafa;
-$color_gravel_approx: #4b4b4b;
-$color_hurricane_approx: #89777e;
-$color_azure_approx: #3c5a96;
-$color_azure_80_approx: rgba(60,90,150,.8);
-$color_shakespeare_approx: #61aadb;
-$color_shakespeare_80_approx: rgba(97,170,219,.8);
-$color_dove_gray_50_approx: rgba(110,110,110,.5);
-$concrete: #f2f2f2;
-$color_storm_dust_approx: #666;
-$color_cream_approx: #ffc;
-$color_gallery_approx: #f0f0f0;
-$color_pink_swan_approx: #bbb;
-$color_ebony_clay_approx: #2b2e43;
-$color_delta_approx: #a2a2a2;
-$black_90: rgba(0,0,0,.9);
-$color_alabaster_approx: #f9f9f9;
-$color_jacarta_approx: #2e2975;
-$color_humming_bird_approx: #d1f4ec;
-$color_regal_blue_approx: #004a73;
-$color_oslo_gray_approx: #8c9190;
-$red: red;
-$color_jewel_approx: #197328;
-$color_outer_space_approx: #2d3039;
-$color_carnation_approx: #fc5a63;
-$color_nevada_approx: #636e82;
-$color_aqua_spring_approx: #edfbf8;
 $gray: grey;
 $color_pumice_approx: #cac8c9;
-$color_star_dust_approx: #9a9f9f;
-$color_black_haze_approx: #f7f7f7;
-$color_valencia_approx: #cd4534;
-$color_vista_blue_approx: #91daa8;
+$blue: #07335E;
+$green: #c2d65f;
+$red: #D14151;
 
 //fonts
 $font_0: Helvetica;
@@ -126,52 +38,20 @@ $font_7: Helvetica;
   z-index: 1;
 }
 
-
-
-
-
 .calling-points {
   padding: 20px;
   font-size: 16px;
+  width: 600px;
   .calling-point {
     list-style: none;
     padding: .25em 0;
     min-height: 3em;
+    color: $blue;
     position: relative;
-    &.expandable {
-      padding: 0;
-      min-height: initial;
-      .calling-points {
-        max-height: 0;
-        overflow: hidden;
-        margin-left: -25px;
-        margin-right: -25px;
-        padding-left: 25px;
-        padding-right: 25px;
-        &.expanded {
-          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-          transition: max-height .5s;
-        }
-      }
-      .btn-expander {
-        background: 0 0;
-        width: 100%;
-        text-align: left;
-        padding-left: 36px;
-        .icon {
-          font-size: 8px;
-        }
-      }
-      .calling-point-due {
-        display: block;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      &.current:after {
-        left: 4px;
-        top: 12px;
-      }
-    }
+    width: 580px;
+
+
+
     &.destination {
       .calling-point-station:before {
         @extend %extend_56;
@@ -194,121 +74,61 @@ $font_7: Helvetica;
     &.current {
       .icon-train-circle {
         font-size: 25px;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         display: block;
         position: absolute;
-        left: -28px;
+        left: -32px;
         top: -1px;
         z-index: 5;
-        color: $color_puerto_rico_approx;
-        background: $color_outer_space_approx;
-        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        color: $blue;
+        background: $blue;
+        background-image: url('http://i.imgur.com/5lO8K80.png');
+        background-repeat: no-repeat;
+        background-position: center;
+
         border-radius: 50%;
       }
       &.departed {
         .icon-train-circle {
-          top: -55px;
+          top: 50px;
         }
         &.nextsplit .icon-train-circle {
           top: 75px;
         }
       }
     }
-    &.split {
-      .calling-point-station-container {
-        height: 5em;
-        &:before {
-          bottom: -18px;
-          top: -22px;
-        }
-      }
-      .btn-switch {
-        position: absolute;
-        right: -25px;
-        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-        border-radius: 0;
-        background: $color_regal_blue_approx;
-        color: $white;
-        text-align: right;
-        padding-right: 45px;
-        max-width: 175px;
-        z-index: 2;
-        small {
-          display: block;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-      }
-      .icon-swap {
-        font-size: 12px;
-        position: absolute;
-        right: 10px;
-        margin-top: -6px;
-        top: 50%;
-      }
-      &.nojoin .calling-point-station-container:before {
-        display: none;
-      }
-    }
-    .calling-point-splitter {
-      border: 1px solid $color_pumice_approx;
-      display: block;
-      width: 75%;
-      position: relative;
-      margin: 10px 0 20px;
-      &:after {
-        @extend %extend_57;
-      }
-      &:before {
-        @extend %extend_57;
-      }
-      &.is-before {
-        &:before {
-          border-width: 0 0 2px 2px;
-          //Instead of the line below you could use @include border-bottom-left-radius($radius)
-          border-bottom-left-radius: 50%;
-          left: -19px;
-          top: -29px;
-        }
-        &:after {
-          border-width: 2px 2px 0 0;
-          //Instead of the line below you could use @include border-top-right-radius($radius)
-          border-top-right-radius: 50%;
-          right: -19px;
-          top: -1px;
-        }
-      }
-      &.is-after {
-        position: absolute;
-        bottom: -5px;
-        &:before {
-          border-width: 2px 0 0 2px;
-          //Instead of the line below you could use @include border-top-left-radius($radius)
-          border-top-left-radius: 50%;
-          left: -19px;
-          top: -1px;
-        }
-        &:after {
-          border-width: 0 2px 2px 0;
-          //Instead of the line below you could use @include border-bottom-right-radius($radius)
-          border-bottom-right-radius: 50%;
-          right: -19px;
-          top: -29px;
-        }
-      }
-    }
+
     .calling-point-time {
       margin-right: 1em;
       display: inline-block;
       float: left;
-      font-family: $font_1, $font_7, $font_5, $font_6;
+      font-family: Helvetica, sans-serif;
       letter-spacing: -.05px;
-      font-size: 18px;
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 700;
     }
+    .calling-point-time-actual {
+      margin-left: -4.11em;
+      float: left;
+      font-size: 1.25rem;
+      line-height: 2.5;
+      margin-top: 30px;
+    }
+
+    .calling-point-time-actual.late {
+      margin-left: -4.11em;
+      float: left;
+      font-size: 1.25rem;
+      line-height: 2.5;
+      margin-top: 30px;
+      color: $red;
+    }
+
     .calling-point-station-container {
       position: relative;
-      margin-left: 5em;
+      margin-left: 9em;
       height: 100px;
       &:before {
         position: absolute;
@@ -324,9 +144,8 @@ $font_7: Helvetica;
       }
     }
 
-    .calling-point-station-container.departed {
+    .calling-point-station-container-decorator.departed {
       position: relative;
-      margin-left: 5em;
       height: 100px;
       &:before {
         position: absolute;
@@ -336,14 +155,37 @@ $font_7: Helvetica;
         content: ' ';
         display: block;
         width: 12px;
-        background: #0d345d;
+        background: $blue;
+        background-size: 2px;
+      }
+    }
+    .calling-point-station-container-decorator.current.departed {
+      position: relative;
+      height: 50px;
+      &:before {
+        position: absolute;
+        left: -14px;
+        top: 2px;
+        bottom: -2.25em;
+        content: ' ';
+        display: block;
+        width: 12px;
+        background: $blue;
         background-size: 2px;
       }
     }
 
+    .calling-point-timeline-schedule {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      font-size: 1.25rem;
+      margin-top: 0.6em;
+    }
+
     .calling-point-station-container-overline.departed {
       width: 4px;
-      background: #c2d65f;
+      background: $green;
       left: -10px;
       top: 10px;
       position: absolute;
@@ -351,14 +193,64 @@ $font_7: Helvetica;
       height: 110px;
       z-index: 5;
     }
+    .calling-point-station-container-overline.current.departed {
+      width: 4px;
+      background: $green;
+      left: -10px;
+      top: 10px;
+      position: absolute;
+      display: inline;
+      height: 65px;
+      z-index: 5;
+    }
 
     .calling-point-due {
-      color: $color_mountain_mist_approx;
+      color: $blue;
       font-size: 14px;
+      font-size: 14px;
+      padding-left: 50px;
+      line-height: 2;
+      padding-right: 20px;
+      font-size: 1.25rem;
     }
     &.selected .calling-point-station {
       font-weight: 700;
     }
+
+    .calling-point-due.departed {
+      color: $gray;
+      font-size: 14px;
+      font-size: 14px;
+      padding-left: 50px;
+      line-height: 2;
+      padding-right: 20px;
+      font-size: 1.25rem;
+    }
+
+    .calling-point-dueInfo{
+      float: left;
+    }
+
+    .calling-point-dueInfo.late{
+      float: left;
+      color: $red;
+    }
+
+    .calling-point-dueInfo.departed{
+      float: left;
+      color: $gray;
+    }
+
+    .calling-point-station {
+      margin-left: 50px;
+      margin-top: 5px;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      font-size: 30px;
+    }
+
     .calling-point-station:before {
       border-radius: 50%;
       content: ' ';
@@ -381,8 +273,10 @@ $font_7: Helvetica;
       top: 5px;
       width: 30px;
       z-index: 3;
-      background: #c2d65f;
-      box-shadow: 0 0 0 4px #0d345d;
+      background: $green;
+      box-shadow: 0 0 0 4px $blue;
     }
   }
 }
+
+

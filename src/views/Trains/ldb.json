@@ -23,6 +23,7 @@
       "station": "Macclesfield",
       "scheduled": "15:41",
       "expected": "15:50",
+      "actual": "15:50",
       "platform": "1"
     },
     {

@@ -51,37 +51,48 @@ class TrainView extends React.Component {
     let callingPointItems2 = [];
     // Start working with the obtained json data
     this.ldbData.callingPoints.map((callingPoint, i) => {
-      // hasActual denotes the fact that the train has actually passed a station
-      if (i == (this.ldbData.callingPoints.length - 1)) {
-        //hasActual = false;
-      }
-      // Is this where the train currently is? Yes.
-      let currentCallingPoint2 = true;
-      if ((i < (this.ldbData.callingPoints.length - 1)) && (this.ldbData.callingPoints[i + 1].hasOwnProperty('actual'))) {
-        currentCallingPoint2 = false;
-      }
-      //This is an extra check, if the journey is complete then current calling point must be the station before destination
-      if (i+2 == (this.ldbData.callingPoints.length)) {
-        currentCallingPoint2 = true;
-      }
       // departed = icon in middle
-      //current = currently the train is where?
-      let listClassName = 'calling-point departed';
-      let stationClassName = 'calling-point-station departed';
-      let stationContainerClassName = 'calling-point-station-container departed';
-      let overlineDecorator = 'calling-point-station-container-overline departed';
-      if(i == 0){
-        listClassName = 'calling-point selected';
-        stationClassName = 'calling-point-station';
-        stationContainerClassName = 'calling-point-station-container';
-        overlineDecorator = 'calling-point-station-container-overline';
+      //current = currently the train is station
+      let hasActual = callingPoint.hasOwnProperty('actual');
+      let listClassName = 'calling-point';
+      let stationClassName = 'calling-point-station';
+      let callingPointTimeActualClassName = 'calling-point-time-actual';
+      let stationContainerClassName = 'calling-point-station-container';
+      let overlineDecoratorClassName = 'calling-point-station-container-overline';
+      let stationContainerDecoratorClassName = 'calling-point-station-container-decorator';
+      let callingPointDueClassName = 'calling-point-due';
+      let dueInfoClassName = 'calling-point-dueInfo';
+      let currentCallingPoint = hasActual;
+      if ((i < (this.ldbData.callingPoints.length - 1)) && (this.ldbData.callingPoints[i + 1].hasOwnProperty('actual'))) {
+        currentCallingPoint = false;
       }
 
-      if(i == this.ldbData.callingPoints.length - 1){
-        listClassName = 'calling-point selected destination';
-        stationClassName = 'calling-point-station';
-        stationContainerClassName = 'calling-point-station-container';
-        overlineDecorator = 'calling-point-station-container-overline';
+      if(i == 0){
+        listClassName += ' origin';
+      }
+
+      if(i == this.ldbData.callingPoints.length - 1)
+      {
+        listClassName += ' destination';
+      }
+
+      if(currentCallingPoint){
+        listClassName += ' current';
+        stationClassName += ' current';
+        stationContainerClassName += ' current';
+        overlineDecoratorClassName += ' current';
+        stationContainerDecoratorClassName += ' current';
+      }
+
+      if(hasActual && i < this.ldbData.callingPoints.length - 1){
+        listClassName += ' departed';
+        stationClassName += ' departed';
+        callingPointTimeActualClassName += ' departed';
+        stationContainerClassName += ' departed';
+        overlineDecoratorClassName += ' departed';
+        stationContainerDecoratorClassName += ' departed';
+        callingPointDueClassName += ' departed';
+        dueInfoClassName += ' departed';
       }
 
       // Now create properties for the components
@@ -89,10 +100,13 @@ class TrainView extends React.Component {
       {
         callingPoint: callingPoint,
         listClassName: listClassName,
+        callingPointTimeActualClassName: callingPointTimeActualClassName,
         stationClassName: stationClassName,
         stationContainerClassName: stationContainerClassName,
-        overlineDecorator: overlineDecorator,
-        currentCallingPoint: currentCallingPoint2
+        overlineDecoratorClassName: overlineDecoratorClassName,
+        stationContainerDecoratorClassName: stationContainerDecoratorClassName,
+        callingPointDueClassName: callingPointDueClassName,
+        dueInfoClassName: dueInfoClassName
       };
 
       // Create list items because that's what we will render
