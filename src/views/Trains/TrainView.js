@@ -8,47 +8,15 @@ import CallingPoint from './../../components/CallingPoint'
 const data = require('./ldb.json')
 
 class TrainView extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.props = props;
     this.ldbData = props.data || data;
   }
 
   render() {
-    let callingPointItems = [];
-    this.ldbData.callingPoints.map((callingPoint, i) => {
-      let hasActual = callingPoint.hasOwnProperty('actual');
-      if (i == (this.ldbData.callingPoints.length - 1)) {
-        hasActual = false;
-      }
-      let currentCallingPoint = true;
-      if ((i < (this.ldbData.callingPoints.length - 1)) && (this.ldbData.callingPoints[i + 1].hasOwnProperty('actual'))) {
-          currentCallingPoint = false;
-      }
-      //This is an extra check, if the journey is complete then current calling point must be the station before destination
-      if (i+2 == (this.ldbData.callingPoints.length)) {
-        currentCallingPoint = true;
-      }
-      let remainingTime = this.getRemainingMinutes(callingPoint.scheduled, callingPoint.expected);
-      let componentProps =
-      {
-        hasActual: hasActual,
-        callingPoint: callingPoint,
-        remainingTime: remainingTime,
-        currentCallingPoint: currentCallingPoint
-      };
-
-      callingPointItems.push(
-        <li className='callingpoints-timeline-block'>
-          <TrainTimes {...componentProps}/>
-          <TrainPlatform {...componentProps} />
-          <TrainTimeline {...componentProps} />
-        </li>
-      )
-    });
-
     // Empty array to render the list itmes
-    let callingPointItems2 = [];
+    let callingPointItems = [];
     // Start working with the obtained json data
     this.ldbData.callingPoints.map((callingPoint, i) => {
       // departed = icon in middle
@@ -62,21 +30,31 @@ class TrainView extends React.Component {
       let stationContainerDecoratorClassName = 'calling-point-station-container-decorator';
       let callingPointDueClassName = 'calling-point-due';
       let dueInfoClassName = 'calling-point-dueInfo';
+
       let currentCallingPoint = hasActual;
       if ((i < (this.ldbData.callingPoints.length - 1)) && (this.ldbData.callingPoints[i + 1].hasOwnProperty('actual'))) {
         currentCallingPoint = false;
       }
-
-      if(i == 0){
+      //Source
+      if (i == 0) {
         listClassName += ' origin';
       }
-
-      if(i == this.ldbData.callingPoints.length - 1)
-      {
+      //Destination
+      if (i == this.ldbData.callingPoints.length - 1) {
         listClassName += ' destination';
       }
 
-      if(currentCallingPoint){
+      callingPoint.dueTime = this.getRemainingMinutes(callingPoint.scheduled, callingPoint.expected);
+      callingPoint.platformName = callingPoint.platform.length > 0 ? `Platform ${callingPoint.platform}` : 'Platform -';
+      if (callingPoint.dueTime.indexOf('On') == -1) {
+        dueInfoClassName += ' late';
+        callingPointTimeActualClassName += ' late';
+      }
+      else if (i == 0) {
+        callingPoint.expected = '';
+      }
+
+      if (currentCallingPoint) {
         listClassName += ' current';
         stationClassName += ' current';
         stationContainerClassName += ' current';
@@ -84,7 +62,7 @@ class TrainView extends React.Component {
         stationContainerDecoratorClassName += ' current';
       }
 
-      if(hasActual && i < this.ldbData.callingPoints.length - 1){
+      if (hasActual && i < this.ldbData.callingPoints.length - 1) {
         listClassName += ' departed';
         stationClassName += ' departed';
         callingPointTimeActualClassName += ' departed';
@@ -94,6 +72,7 @@ class TrainView extends React.Component {
         callingPointDueClassName += ' departed';
         dueInfoClassName += ' departed';
       }
+
 
       // Now create properties for the components
       let componentProps =
@@ -110,30 +89,19 @@ class TrainView extends React.Component {
       };
 
       // Create list items because that's what we will render
-      callingPointItems2.push(
-
-
+      callingPointItems.push(
         <CallingPoint {...componentProps} />
-
       )
     });
 
     return (
-      <div>
-        <div>
-          <Header {...this.ldbData.journey}/>
-          <ul className='calling-points'>
-            {callingPointItems2}
-          </ul>
-        </div>
-        <div style={{float: 'left'}}>
-          <Header {...this.ldbData.journey}/>
-          <ul id='callingpoints-timeline'>
-            {callingPointItems}
-          </ul>
-        </div>
-      </div>
 
+      <div>
+        <Header {...this.ldbData.journey}/>
+        <ul className='calling-points'>
+          {callingPointItems}
+        </ul>
+      </div>
     )
   }
 

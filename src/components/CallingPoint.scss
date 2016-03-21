@@ -18,25 +18,13 @@ $font_7: Helvetica;
 
 //original selectors
 //.calling-points .calling-point.destination .calling-point-station:before, .calling-points .calling-point.origin .calling-point-station:before
-%extend_56 {
+%extend_1 {
   top: 3px;
   left: -23px;
   width: 30px;
   height: 30px;
-  //background-color: $black;
 }
 
-//original selectors
-//.calling-points .calling-point .calling-point-splitter:after, .calling-points .calling-point .calling-point-splitter:before
-%extend_57 {
-  content: ' ';
-  position: absolute;
-  border-color: $color_pumice_approx;
-  border-style: solid;
-  width: 30px;
-  height: 30px;
-  z-index: 1;
-}
 
 .calling-points {
   padding: 20px;
@@ -54,7 +42,7 @@ $font_7: Helvetica;
 
     &.destination {
       .calling-point-station:before {
-        @extend %extend_56;
+        @extend %extend_1;
       }
       .calling-point-station-container:before {
         height: 20px;
@@ -62,7 +50,7 @@ $font_7: Helvetica;
     }
     &.origin {
       .calling-point-station:before {
-        @extend %extend_56;
+        @extend %extend_1;
       }
       .calling-point-station-container:before {
         top: .5em;
@@ -124,6 +112,15 @@ $font_7: Helvetica;
       line-height: 2.5;
       margin-top: 30px;
       color: $red;
+    }
+
+    .calling-point-time-actual.departed {
+      margin-left: -4.11em;
+      float: left;
+      font-size: 1.25rem;
+      line-height: 2.5;
+      margin-top: 30px;
+      color: $gray;
     }
 
     .calling-point-station-container {
@@ -278,5 +275,4 @@ $font_7: Helvetica;
     }
   }
 }
-
 
