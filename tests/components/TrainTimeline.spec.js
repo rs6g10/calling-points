@@ -37,7 +37,7 @@ describe('(Component) TrainTimeline', function () {
   })
 
   it('Should include an <img> as train image', function () {
-    const img = TestUtils.findRenderedDOMComponentWithTag(_rendered, 'img')
+    const img = TestUtils.scryRenderedDOMComponentsWithTag(_rendered, 'img')
     expect(img).to.exist
   })
 })
