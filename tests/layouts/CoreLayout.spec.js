@@ -27,7 +27,7 @@ describe('(Layout) Core', function () {
     _component = shallowRenderWithProps(_props)
   })
 
-  xit('Should render as a <div>.', function () {
+  it('Should render as a <div>.', function () {
     expect(_component.type).to.equal('div')
   })
 })
