@@ -1,7 +1,7 @@
 {
-  "name": "trainline-callingpoints-rahulsharma",
-  "version": "2.0.0-alpha.2",
-  "description": "Trainline Assignment by Rahul",
+  "name": "callingpoints-rahulsharma",
+  "version": "1.0.0",
+  "description": "Calling Points by Rahul",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",

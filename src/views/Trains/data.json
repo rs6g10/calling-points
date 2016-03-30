@@ -1,41 +1,59 @@
 {
   "journey": {
-    "origin": "London Euston",
-    "destination": "Manchester Piccadilly",
-    "scheduled": "14:00"
+    "origin": "Wembley Park",
+    "destination": "Aldgate",
+    "scheduled": "08:32"
   },
   "callingPoints": [
     {
-      "station": "London Euston",
-      "scheduled": "14:00",
-      "expected": "14:00",
-      "actual": "14:00",
-      "platform": ""
+      "station": "Wembley Park",
+      "scheduled": "08:32",
+      "expected": "08:32",
+      "actual": "08:32",
+      "platform": "5"
     },
     {
-      "station": "Stoke-On-Trent",
-      "scheduled": "15:25",
-      "expected": "15:35",
-      "actual": "15:35",
+      "station": "Finchley road",
+      "scheduled": "08:39",
+      "expected": "08:39",
+      "actual": "08:39",
       "platform": "2"
     },
     {
-      "station": "Macclesfield",
-      "scheduled": "15:41",
-      "expected": "15:50",
+      "station": "Baker Street",
+      "scheduled": "08:46",
+      "expected": "08:46",
+      "platform": "7"
+    },
+    {
+      "station": "Great Portand Street",
+      "scheduled": "08:51",
+      "expected": "08:51",
       "platform": "1"
     },
     {
-      "station": "Stockport",
-      "scheduled": "15:56",
-      "expected": "16:03",
+      "station": "Euston Square",
+      "scheduled": "08:52",
+      "expected": "08:52",
+      "platform": "1"
+    },
+    {
+      "station": "Kings Cross",
+      "scheduled": "08:55",
+      "expected": "08:55",
       "platform": "3"
     },
     {
-      "station": "Manchester Piccadilly",
-      "scheduled": "16:07",
-      "expected": "16:11",
-      "platform": "7"
+      "station": "Farringdon",
+      "scheduled": "08:59",
+      "expected": "08:59",
+      "platform": "1"
+    },
+    {
+      "station": "Barbican",
+      "scheduled": "09:01",
+      "expected": "09:01",
+      "platform": "1"
     }
   ]
 }
