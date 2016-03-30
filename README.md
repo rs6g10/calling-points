@@ -20,7 +20,7 @@ http://localhost:3000
 
 This project has been tested in three mordern browsers viz. [Chrome](http://i.imgur.com/FqOVTGP.png), [Firefox](http://i.imgur.com/ReKyCLU.png) and [Microsoft Edge](http://i.imgur.com/zZQYFMl.png). Results can be found on clicking in the links
 
-## ThoughtProcess while doing this assignment
+## ThoughtProcess while working on this project
 1. This is an interesting problem, I first thought of creating a template of calling points. This is possible when there are no 'actual' property present in the data.
 ![first.png](http://i.imgur.com/wou9e0V.png)
 
