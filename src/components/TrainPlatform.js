@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * This class renders the platform information of the application
+ */
 class TrainPlatform extends React.Component {
   constructor(props) {
     super(props);

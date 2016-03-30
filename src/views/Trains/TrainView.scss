@@ -1,14 +1,10 @@
 /* --------------------------------
-
-Modules - reusable parts of our design
-
+Main container and main header
 -------------------------------- */
 .callingpoints-container {
-  /*width: 500px;*/
   margin: 0 auto;
 }
 .callingpoints-container::after {
-  /* clearfix */
   content: '';
   display: table;
   clear: both;
@@ -20,9 +16,7 @@ Modules - reusable parts of our design
 }
 
 /* --------------------------------
-
-Main components
-
+  The Components
 -------------------------------- */
 #callingpoints-timeline {
   position: relative;
@@ -30,8 +24,8 @@ Main components
   margin-top: 2em;
   margin-bottom: 2em;
 }
+/* this is the vertical line */
 #callingpoints-timeline::before {
-  /* this is the vertical line */
   content: '';
   position: absolute;
   top: 0;

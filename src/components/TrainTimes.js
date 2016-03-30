@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * This class renders train times of the application
+ */
 class TrainTimes extends React.Component {
   constructor(props) {
     super(props);

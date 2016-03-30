@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * This class renders the main timeline of the application with image of the train (residing on an imgur server)
+ */
 class TrainTimeline extends React.Component {
   constructor(props) {
     super(props);

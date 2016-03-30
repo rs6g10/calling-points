@@ -5,7 +5,7 @@ import TrainTimeline from './../../components/TrainTimeline'
 import Header from './../../components/Header'
 import CallingPoint from './../../components/CallingPoint'
 
-const data = require('./ldb.json')
+const data = require('./data.json')
 
 class TrainView extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class TrainView extends React.Component {
       else if (i == 0) {
         callingPoint.expected = '';
       }
-
+      //check if train is currently at the station
       if (currentCallingPoint) {
         listClassName += ' current';
         stationClassName += ' current';
@@ -61,7 +61,7 @@ class TrainView extends React.Component {
         overlineDecoratorClassName += ' current';
         stationContainerDecoratorClassName += ' current';
       }
-
+      //check if the train has departed the station
       if (hasActual && i < this.ldbData.callingPoints.length - 1) {
         listClassName += ' departed';
         stationClassName += ' departed';
@@ -105,6 +105,12 @@ class TrainView extends React.Component {
     )
   }
 
+  /**
+   * Get remaining time in minutes
+   * @param startTime - scheduled time
+   * @param endTime - expected time
+   * @returns {string} - formatted time in minutes
+   */
   getRemainingMinutes(startTime, endTime) {
     let timeStart = new Date("01/01/2016 " + startTime).getTime();
     let timeEnd = new Date("01/01/2016 " + endTime).getTime();

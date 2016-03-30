@@ -6,18 +6,7 @@ $blue: #07335E;
 $green: #c2d65f;
 $red: #D14151;
 
-//fonts
-$font_0: Helvetica;
-$font_1: Helvetica;
-$font_2: Helvetica;
-$font_3: Helvetica;
-//$font_4: Helvetica;
-$font_5: Helvetica;
-$font_6: sans-serif;
-$font_7: Helvetica;
-
-//original selectors
-//.calling-points .calling-point.destination .calling-point-station:before, .calling-points .calling-point.origin .calling-point-station:before
+//a selector
 %extend_1 {
   top: 3px;
   left: -23px;
@@ -37,8 +26,6 @@ $font_7: Helvetica;
     color: $blue;
     position: relative;
     width: 580px;
-
-
 
     &.destination {
       .calling-point-station:before {
@@ -275,4 +262,3 @@ $font_7: Helvetica;
     }
   }
 }
-

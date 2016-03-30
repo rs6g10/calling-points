@@ -1,9 +1,9 @@
 import React from 'react'
 
 /**
- * This class renders the heading of the application that shows main information of Journey.
+ * This class renders the calling points of the application as a list item
  */
-class Header extends React.Component {
+class CallingPoint extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
@@ -17,15 +17,15 @@ class Header extends React.Component {
 
         <div className={this.props.stationContainerClassName}>
           <div className={this.props.stationContainerDecoratorClassName}>
-          <div className={this.props.overlineDecoratorClassName}></div>
-          <i className='icon icon-train-circle' />
-          <div className={this.props.stationClassName}>
-            {this.props.callingPoint.station}
-          </div>
-          <div className={this.props.callingPointDueClassName}>
-            <span className={this.props.dueInfoClassName}>{this.props.callingPoint.dueTime}</span>
-            <span style={{float: 'right'}}>{this.props.callingPoint.platformName}</span>
-          </div>
+            <div className={this.props.overlineDecoratorClassName}></div>
+            <i className='icon icon-train-circle' />
+            <div className={this.props.stationClassName}>
+              {this.props.callingPoint.station}
+            </div>
+            <div className={this.props.callingPointDueClassName}>
+              <span className={this.props.dueInfoClassName}>{this.props.callingPoint.dueTime}</span>
+              <span style={{float: 'right'}}>{this.props.callingPoint.platformName}</span>
+            </div>
           </div>
         </div>
       </li>
@@ -34,4 +34,4 @@ class Header extends React.Component {
 
 
 }
-export default Header
+export default CallingPoint

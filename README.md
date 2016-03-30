@@ -1,4 +1,4 @@
-# ttl-engineering for rahuldevendra.sharma@gmail.com
+# Train Calling points
 
 This project is generated with [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit)
 Please note that files, environment settings are unchanged from the starter kit. The only files changed or added
@@ -18,7 +18,7 @@ http://localhost:3000
 
 1. npm test
 
-This assignment has been tested in three mordern browsers viz. [Chrome](http://i.imgur.com/FqOVTGP.png), [Firefox](http://i.imgur.com/ReKyCLU.png) and [Microsoft Edge](http://i.imgur.com/zZQYFMl.png). Results can be found on clicking in the links
+This project has been tested in three mordern browsers viz. [Chrome](http://i.imgur.com/FqOVTGP.png), [Firefox](http://i.imgur.com/ReKyCLU.png) and [Microsoft Edge](http://i.imgur.com/zZQYFMl.png). Results can be found on clicking in the links
 
 ## ThoughtProcess while doing this assignment
 1. This is an interesting problem, I first thought of creating a template of calling points. This is possible when there are no 'actual' property present in the data.
@@ -34,14 +34,8 @@ This assignment has been tested in three mordern browsers viz. [Chrome](http://i
 ![fourth.png](http://i.imgur.com/6h9aG32.png)
 
 ---
-
-#UI Developer Technical Exercise
-
-Using the supplied live departure board data (ldb.json), create a web page that faithfully reproduces the mock-up (see mockup.png).
-
-We expect you to test drive your code, ensuring data integrity and consistent mark-up generation.
-
-###ldb.json
+## Data
+###data.json
 
 ```javascript
 {

@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * This class renders the heading of the application that shows main information of Journey.
+ */
 class Header extends React.Component {
   constructor(props) {
     super(props);
